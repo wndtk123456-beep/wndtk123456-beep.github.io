@@ -16,3 +16,24 @@ const observer = new IntersectionObserver(
 );
 
 revealNodes.forEach((node) => observer.observe(node));
+
+const sectionSelect = document.querySelector("#sectionSelect");
+
+if (sectionSelect) {
+  sectionSelect.addEventListener("change", function () {
+    const targetId = this.value;
+
+    if (!targetId) return;
+
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      this.value = "";
+    }
+  });
+}
