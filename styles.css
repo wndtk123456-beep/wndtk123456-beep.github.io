@@ -1,12 +1,12 @@
 :root {
-  --bg: #f7f5ef;
-  --surface: #fffdf8;
-  --text: #111111;
-  --muted: #5f625f;
-  --line: #d9d6ce;
-  --accent: #154f45;
-  --accent-2: #c24b32;
-  --soft: #e9eee6;
+  --bg: #ffffff;
+  --surface: #f8f9fb;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+  --accent-2: #7c3aed;
+  --soft: #f1f5f9;
 }
 
 * {
@@ -20,11 +20,11 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 85% 12%, rgba(194, 75, 50, 0.13), transparent 22rem),
-    radial-gradient(circle at 10% 22%, rgba(21, 79, 69, 0.12), transparent 24rem),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(37, 99, 235, 0.06), transparent),
+    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(124, 58, 237, 0.05), transparent),
     var(--bg);
   color: var(--text);
-  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
 
 a {
@@ -41,7 +41,7 @@ a {
   gap: 24px;
   padding: 22px 44px;
   border-bottom: 1px solid var(--line);
-  background: rgba(247, 245, 239, 0.86);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
 }
 
@@ -64,11 +64,7 @@ a {
 }
 
 .logo::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  background: var(--accent-2);
+  display: none;
 }
 
 .site-header nav {
@@ -173,7 +169,7 @@ h3 {
   margin: 0;
   padding: 18px;
   border: 1px solid var(--line);
-  background: rgba(255, 253, 248, 0.68);
+  background: rgba(248, 249, 251, 0.72);
   backdrop-filter: blur(12px);
 }
 
@@ -466,6 +462,56 @@ figcaption {
 .contact-row div {
   display: grid;
   align-content: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-content: start;
+}
+
+.contact-line {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans", "Noto Sans KR", sans-serif;
+}
+
+.contact-line:hover {
+  color: var(--accent);
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.edu-entry {
+  padding: 16px 20px;
+  border-left: 2px solid var(--accent);
+  background: var(--soft);
+  border-radius: 0 8px 8px 0;
+}
+
+.edu-name {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.edu-period {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .reveal {
