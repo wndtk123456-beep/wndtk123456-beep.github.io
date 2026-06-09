@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>송승민 | 임베디드·비전 소프트웨어 포트폴리오</title>
@@ -13,45 +14,68 @@
 <body>
   <header class="site-header">
     <a class="logo" href="#top"></a>
-    <nav>
-      <a href="#about">01 About Me</a>
-      <a href="#work">02 Projects</a>
-      <a href="#toolbox">03 Toolbox</a>
-      <a href="#contact">04 Contact</a>
-    </nav>
+    <div class="header-menu">
+  <label for="sectionSelect" class="sr-only">섹션 이동</label>
+
+  <select id="sectionSelect" class="section-select">
+    <option value="">Menu</option>
+    <option value="#Education">Education</option>
+    <option value="#work">Projects</option>
+    <option value="#Technical Skills">Technical Skills</option>
+    <option value="#contact">Contact</option>
+  </select>
+</div>
   </header>
 
   <main id="top">
     <section class="hero">
       <figure class="hero-image reveal">
         <img src="./assets/profile.jpg" alt="송승민 프로필 사진">
-        <figcaption>Embedded Software Developer</figcaption>
+        <figcaption></figcaption>
       </figure>
       <div class="hero-copy reveal">
         <p class="kicker">EMBEDDED · VISION · VEHICLE DATA</p>
         <h1>송승민</h1>
-        <p class="hero-line">실차 CAN과 단일 카메라 제어를 실제 시스템으로 연결합니다.</p>
+        <p class="hero-line">실제 장비에서 동작하는 시스템을 만듭니다.</p>
         <p class="hero-desc">
-          임베디드 소프트웨어 개발자 신입 지원자입니다. 센서 입력, 통신, 비전 추론,
-          판정 로직, 결과 화면까지 이어지는 흐름을 직접 구현하며 프로젝트를 완성했습니다.
+          임베디드 시스템 분야를 연구하며 실제 환경에서 안정적으로 동작하도록 구성하는 임베디드 엔지니어입니다. 하드웨어 구성 - 펌웨어 개발 - 튜닝 - 결과 화면까지 이어지는 흐름을 직접 구현하며 프로젝트를 완성했습니다.
         </p>
         <div class="hero-links">
-          <a href="mailto:wndtk123456@gmail.com">wndtk123456@gmail.com</a>
+          <!-- <a href="mailto:wndtk123456@gmail.com">wndtk123456@gmail.com</a>
           <a href="https://github.com/wndtk123456-beep" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
+        </div> -->
+          <a href="mailto:wndtk123456@gmail.com" class="hero-contact-item">
+    <i class="fa-solid fa-envelope"></i>
+    <span>wndtk123456@gmail.com</span>
+  </a>
+
+  <a href="tel:01098677511" class="hero-contact-item hero-contact-pill">
+    <i class="fa-solid fa-phone"></i>
+    <span>010-9867-7511</span>
+  </a>
+
+  <a href="https://github.com/wndtk123456-beep" target="_blank" rel="noreferrer" class="hero-contact-item">
+    <i class="fa-brands fa-github"></i>
+    <span>@wndtk123456-beep</span>
+  </a>
+
+  <!-- <a href="https://github.com/wndtk123456-beep" target="_blank" rel="noreferrer" class="hero-contact-item">
+    <i class="fa-solid fa-link"></i>
+    <span>github.com/wndtk123456-beep</span>
+  </a> -->
+</div>
       </div>
     </section>
 
-    <section class="section reveal" id="about">
-      <p class="section-no">01 About Me</p>
+    <section class="section reveal" id="Education">
+      <p class="section-no"></p>
       <div class="section-grid">
-        <h2>About Me</h2>
+        <h2>Education</h2>
         <div>
           <p class="lead">
-            안녕하세요. 임베디드와 컴퓨터 비전을 기반으로 실제 장비에서 동작하는 시스템을 만드는
-            송승민입니다. 모델 정확도뿐 아니라 입력 데이터, 통신 안정성, 판정 기준, 사용자에게 보이는
-            결과 화면까지 함께 맞아야 시스템이 완성된다고 생각합니다.
-          </p>
+            <!-- 안녕하세요. 임베디드와 컴퓨터 비전을 기반으로 실제 장비에서 동작하는 시스템을 만드는
+            송승민입니다. 모델 정확도뿐 아니라 입력 데이터, 차량 신호가 요구 조건과 일치해야 시스템이 완성된다고 생각합니다.
+          </p> -->
           <div class="edu-list">
             <div class="edu-entry">
               <p class="edu-name">경북대학교 K-Digital Training AI 빅데이터 전문가 양성과정</p>
@@ -59,7 +83,13 @@
             </div>
             <div class="edu-entry">
               <p class="edu-name">금오공과대학교 (졸업)</p>
+              <p class="edu-name">기계시스템공학과</p>
               <p class="edu-period">2017.03 ~ 2025.02</p>
+            </div>
+            <div class="edu-entry">
+              <p class="edu-name">김천중앙고등학교</p>
+              <p class="edu-name">자연계</p>
+              <p class="edu-period">2014.03 ~ 2017.02</p>
             </div>
           </div>
         </div>
@@ -67,8 +97,8 @@
     </section>
 
     <section class="section reveal" id="work">
-      <p class="section-no">02 Projects</p>
-      <h2>프로젝트</h2>
+      <p class="section-no"></p>
+      <h2>Projects</h2>
 
       <div class="project-list">
         <article class="project-item">
@@ -77,7 +107,6 @@
               <h3 class="project-item-title">YOLO 기반 스마트 주차 판정 시스템</h3>
               <p class="project-item-meta">P-01 · Computer Vision</p>
             </div>
-            <a class="project-item-link" href="https://github.com/wndtk123456-beep/smart-parking-yolo" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
           </header>
           <p class="project-item-subtitle">단일 카메라로 주차면별 점유 상태를 자동 판정하는 비전 시스템</p>
           <div class="project-item-body">
@@ -89,6 +118,7 @@
                 <li><b>성과</b><span>mAP50 0.948 기준으로 10개 주차면의 상태를 화면에 시각화했습니다.</span></li>
               </ul>
               <p class="project-item-stack">Python, YOLO, OpenCV, IoU</p>
+              <a class="project-item-link" href="https://github.com/wndtk123456-beep/smart-parking-yolo" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
             </div>
             <figure class="project-item-visual">
               <img src="./assets/yolo-roi.jpg" alt="YOLO 기반 주차면 ROI 판정 결과">
@@ -103,7 +133,6 @@
               <h3 class="project-item-title">STM32 OBD-II CAN 실차 연동</h3>
               <p class="project-item-meta">P-02 · Vehicle Data</p>
             </div>
-            <a class="project-item-link" href="https://github.com/wndtk123456-beep/stm32-obd2-can-sportage" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
           </header>
           <p class="project-item-subtitle">스포티지 4세대 실차에서 OBD-II / CAN 진단 데이터를 직접 수집·검증</p>
           <div class="project-item-body">
@@ -115,6 +144,7 @@
                 <li><b>성과</b><span>RPM·속도·스로틀 등 표준 PID를 수집하고, 내부 CAN ID 수집의 구조적 한계까지 검증했습니다.</span></li>
               </ul>
               <p class="project-item-stack">STM32, CAN, OBD-II, SavvyCAN</p>
+              <a class="project-item-link" href="https://github.com/wndtk123456-beep/stm32-obd2-can-sportage" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
             </div>
             <figure class="project-item-visual">
               <img src="./assets/obd-driving.jpg" alt="스포티지 실차 주행 중 OBD-II 데이터 확인 화면">
@@ -129,7 +159,6 @@
               <h3 class="project-item-title">단일 카메라 RC카 제어</h3>
               <p class="project-item-meta">P-03 · Robotics</p>
             </div>
-            <a class="project-item-link" href="https://github.com/wndtk123456-beep/single-camera-rc-car" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
           </header>
           <p class="project-item-subtitle">카메라 한 대의 영상만으로 인지·추론·제어를 연결한 RC카 주행 시스템</p>
           <div class="project-item-body">
@@ -141,6 +170,7 @@
                 <li><b>성과</b><span>UDP 영상 전송, 객체 추론, 모터 명령 피드백이 이어지는 단일 제어 흐름을 구현했습니다.</span></li>
               </ul>
               <p class="project-item-stack">Raspberry Pi, UDP, OpenCV, ONNX</p>
+              <a class="project-item-link" href="https://github.com/wndtk123456-beep/single-camera-rc-car" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
             </div>
             <figure class="project-item-visual visual-dark">
               <img src="./assets/rc-track.png" alt="단일 카메라 RC카 자율주행 트랙">
@@ -155,7 +185,6 @@
               <h3 class="project-item-title">Ninja 제스처 인식</h3>
               <p class="project-item-meta">P-04 · AI Training</p>
             </div>
-            <a class="project-item-link" href="https://github.com/wndtk123456-beep/ninja" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
           </header>
           <p class="project-item-subtitle">손 랜드마크 기반 제스처 인식 모델 학습과 안정화</p>
           <div class="project-item-body">
@@ -163,10 +192,11 @@
               <ul class="project-item-bullets">
                 <li><b>배경</b><span>사용자의 동작을 인식해 콘텐츠와 연결하는 제스처 인식 모델이 필요했습니다.</span></li>
                 <li><b>문제</b><span>데이터 품질 편차와 학습 결과의 흔들림 때문에 실시간 인식이 안정적이지 않았습니다.</span></li>
-                <li><b>해결</b><span>데이터 정제, 입력 형식 통일, 학습 조건 최적화와 반복 검증을 담당했습니다.</span></li>
+                <li><b>해결</b><span>데이터 정제, 입력 형식 통일, 학습 조건 최적화와 반복 검증을 수행했습니다.</span></li>
                 <li><b>성과</b><span>학습 흐름을 재정리해 모델 결과의 일관성과 실행 안정성을 개선했습니다.</span></li>
               </ul>
               <p class="project-item-stack">Data Cleaning, Training, Optimization</p>
+              <a class="project-item-link" href="https://github.com/wndtk123456-beep/ninja" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
             </div>
             <figure class="project-item-visual">
               <img src="./assets/ninja-gesture.jpg" alt="손 랜드마크 기반 Ninja 제스처 인식 화면">
@@ -181,7 +211,6 @@
               <h3 class="project-item-title">우울증 예측 데이터 분석</h3>
               <p class="project-item-meta">P-05 · Data Analysis</p>
             </div>
-            <a class="project-item-link" href="https://github.com/wndtk123456-beep/student-depression-risk-analysis" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
           </header>
           <p class="project-item-subtitle">학생 생활·설문 데이터에서 우울증 관련 패턴을 탐색하고 시각화</p>
           <div class="project-item-body">
@@ -193,6 +222,7 @@
                 <li><b>성과</b><span>주요 변수의 패턴과 예측 결과를 비전공자도 이해할 수 있는 시각 자료로 전달했습니다.</span></li>
               </ul>
               <p class="project-item-stack">Visualization, Analysis, Model Comparison</p>
+              <a class="project-item-link" href="https://github.com/wndtk123456-beep/student-depression-risk-analysis" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
             </div>
             <figure class="project-item-visual visual-contain">
               <img src="./assets/depression-demo.jpg" alt="학생 생활 데이터 기반 우울증 위험 예측 화면">
@@ -203,10 +233,10 @@
       </div>
     </section>
 
-    <section class="section reveal" id="toolbox">
-      <p class="section-no">03 Toolbox</p>
+    <section class="section reveal" id="Technical Skills">
+      <p class="section-no"></p>
       <div class="section-grid">
-        <h2>Toolbox</h2>
+        <h2>Technical Skills</h2>
         <div class="tool-list">
           <article>
             <h3>Python</h3>
@@ -237,13 +267,29 @@
     </section>
 
     <section class="section reveal" id="contact">
-      <p class="section-no">04 Contact</p>
+      <p class="section-no">
+        
+      </p>
       <div class="contact-row">
         <h2>Contact Me</h2>
-        <div class="contact-info">
-          <p class="contact-line">Phone : 010 - 9867 - 7511</p>
-          <a href="mailto:wndtk123456@gmail.com" class="contact-line">Email : wndtk123456@gmail.com</a>
-          <a href="https://github.com/wndtk123456-beep" target="_blank" rel="noreferrer" class="contact-line">Github : github.com/wndtk123456-beep</a>
+        <div class="contact-info contact-grid">
+          <a href="mailto:wndtk123456@gmail.com" class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>wndtk123456@gmail.com</span>
+          </a>
+
+          <a href="tel:01098677511" class="contact-item contact-pill">
+            <i class="fa-solid fa-phone"></i>
+            <span>010 9867 7511</span>
+          </a>
+
+          <a href="https://github.com/wndtk123456-beep" target="_blank" rel="noreferrer" class="contact-item">
+            <i class="fa-brands fa-github"></i>
+            <span>@wndtk123456-beep</span>
+          </a>
+
+
+          </a>
         </div>
       </div>
     </section>
