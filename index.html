@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>송승민 | 임베디드·비전 소프트웨어 포트폴리오</title>
+  <meta name="description" content="실차 CAN, YOLO 주차 판정, 단일 카메라 RC카 제어를 중심으로 정리한 송승민 포트폴리오">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top"></a>
+    <nav>
+      <a href="#about">01_소개</a>
+      <a href="#work">02_프로젝트</a>
+      <a href="#toolbox">03_기술스택</a>
+      <a href="#contact">04_연락처</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <figure class="hero-image reveal">
+        <img src="./assets/profile.jpg" alt="송승민 프로필 사진">
+        <figcaption>Embedded Software Developer</figcaption>
+      </figure>
+      <div class="hero-copy reveal">
+        <p class="kicker">EMBEDDED · VISION · VEHICLE DATA</p>
+        <h1>송승민</h1>
+        <p class="hero-line">실차 CAN과 단일 카메라 제어를 실제 시스템으로 연결합니다.</p>
+        <p class="hero-desc">
+          임베디드 소프트웨어 개발자 신입 지원자입니다. 센서 입력, 통신, 비전 추론,
+          판정 로직, 결과 화면까지 이어지는 흐름을 직접 구현하며 프로젝트를 완성했습니다.
+        </p>
+        <div class="hero-links">
+          <a href="mailto:wndtk123456@gmail.com">wndtk123456@gmail.com</a>
+          <a href="https://github.com/wndtk123456-beep" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="about">
+      <p class="section-no">01 About</p>
+      <div class="section-grid">
+        <h2>소개</h2>
+        <div>
+          <p class="lead">
+            안녕하세요. 임베디드와 컴퓨터 비전을 기반으로 실제 장비에서 동작하는 시스템을 만드는
+            송승민입니다. 모델 정확도뿐 아니라 입력 데이터, 통신 안정성, 판정 기준, 사용자에게 보이는
+            결과 화면까지 함께 맞아야 시스템이 완성된다고 생각합니다.
+          </p>
+          <ul class="plain-list">
+            <li>금오공과대학교 기계시스템공학과</li>
+            <li>발레오모빌리티 취업연계형 부트캠프 프로젝트 수행</li>
+            <li>실차 스포티지 4세대 OBD-II CAN 배선 및 CAN ID 확인 경험</li>
+            <li>YOLO 학습, ROI/IoU 기반 판정, 영상처리 결과 화면 구현 경험</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="work">
+      <p class="section-no">02 Projects</p>
+      <h2>프로젝트</h2>
+
+      <div class="project-list">
+        <article class="project-item">
+          <header class="project-item-head">
+            <div class="project-item-titles">
+              <h3 class="project-item-title">YOLO 기반 스마트 주차 판정 시스템</h3>
+              <p class="project-item-meta">P-01 · Computer Vision</p>
+            </div>
+            <a class="project-item-link" href="https://github.com/wndtk123456-beep/smart-parking-yolo" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          </header>
+          <p class="project-item-subtitle">단일 카메라로 주차면별 점유 상태를 자동 판정하는 비전 시스템</p>
+          <div class="project-item-body">
+            <div class="project-item-content">
+              <ul class="project-item-bullets">
+                <li><b>배경</b><span>카메라 한 대로 주차면별 점유 상태를 자동 판정해야 했습니다.</span></li>
+                <li><b>문제</b><span>조명과 각도 변화로 ROI 검출이 흔들리고 중복 영역이 발생했습니다.</span></li>
+                <li><b>해결</b><span>YOLO 학습, ROI 설정, IoU 계산, 중복 제거, <code>EMPTY / OCCUPIED</code> 판정을 구현했습니다.</span></li>
+                <li><b>성과</b><span>mAP50 0.948 기준으로 10개 주차면의 상태를 화면에 시각화했습니다.</span></li>
+              </ul>
+              <p class="project-item-stack">Python, YOLO, OpenCV, IoU</p>
+            </div>
+            <figure class="project-item-visual">
+              <img src="./assets/yolo-roi.jpg" alt="YOLO 기반 주차면 ROI 판정 결과">
+              <figcaption>주차면 ROI · slot_1 ~ slot_10</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <header class="project-item-head">
+            <div class="project-item-titles">
+              <h3 class="project-item-title">STM32 OBD-II CAN 실차 연동</h3>
+              <p class="project-item-meta">P-02 · Vehicle Data</p>
+            </div>
+            <a class="project-item-link" href="https://github.com/wndtk123456-beep/stm32-obd2-can-sportage" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          </header>
+          <p class="project-item-subtitle">스포티지 4세대 실차에서 OBD-II / CAN 진단 데이터를 직접 수집·검증</p>
+          <div class="project-item-body">
+            <div class="project-item-content">
+              <ul class="project-item-bullets">
+                <li><b>배경</b><span>실제 스포티지 4세대 차량에서 진단 데이터를 직접 수집하고자 했습니다.</span></li>
+                <li><b>문제</b><span>표준 OBD-II PID 밖의 내부 CAN 신호는 Gateway 정책으로 진단 포트에 전달되지 않았습니다.</span></li>
+                <li><b>해결</b><span>STM32-OBD-II 배선, CAN 설정, SavvyCAN 프레임 비교와 ID 분석을 수행했습니다.</span></li>
+                <li><b>성과</b><span>RPM·속도·스로틀 등 표준 PID를 수집하고, 내부 CAN ID 수집의 구조적 한계까지 검증했습니다.</span></li>
+              </ul>
+              <p class="project-item-stack">STM32, CAN, OBD-II, SavvyCAN</p>
+            </div>
+            <figure class="project-item-visual">
+              <img src="./assets/obd-driving.jpg" alt="스포티지 실차 주행 중 OBD-II 데이터 확인 화면">
+              <figcaption>실차 주행 중 OBD-II 데이터 수집</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <header class="project-item-head">
+            <div class="project-item-titles">
+              <h3 class="project-item-title">단일 카메라 RC카 제어</h3>
+              <p class="project-item-meta">P-03 · Robotics</p>
+            </div>
+            <a class="project-item-link" href="https://github.com/wndtk123456-beep/single-camera-rc-car" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          </header>
+          <p class="project-item-subtitle">카메라 한 대의 영상만으로 인지·추론·제어를 연결한 RC카 주행 시스템</p>
+          <div class="project-item-body">
+            <div class="project-item-content">
+              <ul class="project-item-bullets">
+                <li><b>배경</b><span>카메라 한 대의 영상만으로 RC카의 주행 인지와 제어를 연결해야 했습니다.</span></li>
+                <li><b>문제</b><span>영상 전송과 추론 지연이 누적되면 조향 명령이 늦어져 주행이 불안정해졌습니다.</span></li>
+                <li><b>해결</b><span>JPEG 품질과 패킷 크기를 조정하고 PC 추론과 Raspberry Pi 제어 역할을 분리했습니다.</span></li>
+                <li><b>성과</b><span>UDP 영상 전송, 객체 추론, 모터 명령 피드백이 이어지는 단일 제어 흐름을 구현했습니다.</span></li>
+              </ul>
+              <p class="project-item-stack">Raspberry Pi, UDP, OpenCV, ONNX</p>
+            </div>
+            <figure class="project-item-visual visual-dark">
+              <img src="./assets/rc-track.png" alt="단일 카메라 RC카 자율주행 트랙">
+              <figcaption>RC카 시연 트랙</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <header class="project-item-head">
+            <div class="project-item-titles">
+              <h3 class="project-item-title">Ninja 제스처 인식</h3>
+              <p class="project-item-meta">P-04 · AI Training</p>
+            </div>
+            <a class="project-item-link" href="https://github.com/wndtk123456-beep/ninja" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          </header>
+          <p class="project-item-subtitle">손 랜드마크 기반 제스처 인식 모델 학습과 안정화</p>
+          <div class="project-item-body">
+            <div class="project-item-content">
+              <ul class="project-item-bullets">
+                <li><b>배경</b><span>사용자의 동작을 인식해 콘텐츠와 연결하는 제스처 인식 모델이 필요했습니다.</span></li>
+                <li><b>문제</b><span>데이터 품질 편차와 학습 결과의 흔들림 때문에 실시간 인식이 안정적이지 않았습니다.</span></li>
+                <li><b>해결</b><span>데이터 정제, 입력 형식 통일, 학습 조건 최적화와 반복 검증을 담당했습니다.</span></li>
+                <li><b>성과</b><span>학습 흐름을 재정리해 모델 결과의 일관성과 실행 안정성을 개선했습니다.</span></li>
+              </ul>
+              <p class="project-item-stack">Data Cleaning, Training, Optimization</p>
+            </div>
+            <figure class="project-item-visual">
+              <img src="./assets/ninja-gesture.jpg" alt="손 랜드마크 기반 Ninja 제스처 인식 화면">
+              <figcaption>손 랜드마크 추적 (rabbit 제스처)</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <header class="project-item-head">
+            <div class="project-item-titles">
+              <h3 class="project-item-title">우울증 예측 데이터 분석</h3>
+              <p class="project-item-meta">P-05 · Data Analysis</p>
+            </div>
+            <a class="project-item-link" href="https://github.com/wndtk123456-beep/student-depression-risk-analysis" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          </header>
+          <p class="project-item-subtitle">학생 생활·설문 데이터에서 우울증 관련 패턴을 탐색하고 시각화</p>
+          <div class="project-item-body">
+            <div class="project-item-content">
+              <ul class="project-item-bullets">
+                <li><b>배경</b><span>생활 및 설문 데이터를 바탕으로 우울증과 관련된 패턴을 탐색했습니다.</span></li>
+                <li><b>문제</b><span>변수별 분포와 관계가 복잡해 모델 결과만으로 원인을 설명하기 어려웠습니다.</span></li>
+                <li><b>해결</b><span>데이터 분포와 변수 관계를 시각화하고 모델별 결과를 비교해 해석 기준을 정리했습니다.</span></li>
+                <li><b>성과</b><span>주요 변수의 패턴과 예측 결과를 비전공자도 이해할 수 있는 시각 자료로 전달했습니다.</span></li>
+              </ul>
+              <p class="project-item-stack">Visualization, Analysis, Model Comparison</p>
+            </div>
+            <figure class="project-item-visual visual-contain">
+              <img src="./assets/depression-demo.jpg" alt="학생 생활 데이터 기반 우울증 위험 예측 화면">
+              <figcaption>우울증 위험도 예측 인터페이스</figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="toolbox">
+      <p class="section-no">03 Toolbox</p>
+      <div class="section-grid">
+        <h2>Toolbox</h2>
+        <div class="tool-list">
+          <article>
+            <h3>Python</h3>
+            <p>YOLO 학습, OpenCV 영상처리, ROI/IoU 판정 로직, 데이터 정제와 시각화 작업에 사용했습니다.</p>
+          </article>
+          <article>
+            <h3>Embedded</h3>
+            <p>STM32, Raspberry Pi, UART, GPIO를 활용해 센서 입력과 제어 명령이 실제 장비에서 동작하도록 구성했습니다.</p>
+          </article>
+          <article>
+            <h3>Vehicle Data</h3>
+            <p>CAN, OBD-II, SavvyCAN을 사용해 실차 프레임을 확인하고 유효 CAN ID와 PID 응답을 검증했습니다.</p>
+          </article>
+          <article>
+            <h3>AI / Vision</h3>
+            <p>YOLO, OpenCV, ONNX Runtime, LabelMe로 객체 검출 결과를 실제 판정 로직과 화면 출력으로 연결했습니다.</p>
+          </article>
+          <article>
+            <h3>Data</h3>
+            <p>NumPy 기반 전처리, 데이터 정제, 결과 시각화, 모델 학습 안정화 과정을 프로젝트 목적에 맞게 수행했습니다.</p>
+          </article>
+          <article>
+            <h3>Git / GitHub</h3>
+            <p>프로젝트별 코드를 분리해 관리하고, README와 커밋 이력을 통해 구현 과정을 설명 가능한 형태로 정리했습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <p class="section-no">04 Contact</p>
+      <div class="contact-row">
+        <h2>연락처</h2>
+        <div>
+          <a href="mailto:wndtk123456@gmail.com">wndtk123456@gmail.com</a>
+          <a href="https://github.com/wndtk123456-beep" target="_blank" rel="noreferrer">github.com/wndtk123456-beep</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
